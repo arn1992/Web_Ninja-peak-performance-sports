@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function() {
+      const theme = localStorage.getItem('pps-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+  <title>Shop All Products — Peak Performance Sports</title>
+  <meta name="description" content="Browse our full catalog of sporting equipment, activewear, footwear, and accessories. Filter by category, brand, and price to find your perfect gear.">
+  <meta property="og:title" content="Shop All Products — Peak Performance Sports">
+  <meta property="og:description" content="Browse our full catalog of sporting equipment, activewear, footwear, and accessories.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1280&auto=format&fit=crop">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="page.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Peak Performance Sports Home">
+        <div class="logo-icon" aria-hidden="true">⚡</div>
+        <div class="logo-text">
+          <span class="logo-name">Peak Performance</span>
+          <span class="logo-tagline">Sports & Fitness</span>
+        </div>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="page.html">Shop</a></li>
+          <li><a href="sports__fitness.html">Sports &amp; Fitness</a></li>
+          <li><a href="new_arrivals.html">New Arrivals</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="cart-btn" aria-label="Open shopping cart">
+          🛒
+          <span class="cart-count" id="cart-count" aria-live="polite" style="display:none">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" aria-labelledby="shop-heading">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span class="breadcrumb-current">Shop</span>
+    </nav>
+    <h1 id="shop-heading">Shop All Products</h1>
+    <p>Browse our full catalog of sporting equipment, activewear, footwear, and accessories.</p>
+  </div>
+</section>
+
+<!-- ── SHOP CONTENT ── -->
+<main class="section" id="main-content">
+  <div class="container">
+    <div class="shop-layout">
+
+      <!-- Sidebar Filters -->
+      <aside class="shop-sidebar" aria-label="Product filters">
+        <h2 style="font-size:1rem;font-weight:700;margin-bottom:var(--space-3);color:var(--text-primary)">Filters</h2>
+
+        <div class="filter-section">
+          <div class="filter-title">Category</div>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" class="filter-category" value="footwear"> Footwear
+              <span class="filter-option-count">12</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-category" value="activewear"> Activewear
+              <span class="filter-option-count">18</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-category" value="equipment"> Equipment
+              <span class="filter-option-count">24</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-category" value="accessories"> Accessories
+              <span class="filter-option-count">15</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-category" value="tech"> Tech &amp; Wearables
+              <span class="filter-option-count">8</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-category" value="nutrition"> Nutrition
+              <span class="filter-option-count">10</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-title">Brand</div>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" class="filter-brand" value="nike"> Nike
+              <span class="filter-option-count">22</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-brand" value="adidas"> Adidas
+              <span class="filter-option-count">18</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-brand" value="under-armour"> Under Armour
+              <span class="filter-option-count">14</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-brand" value="puma"> Puma
+              <span class="filter-option-count">10</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-brand" value="new-balance"> New Balance
+              <span class="filter-option-count">9</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-brand" value="reebok"> Reebok
+              <span class="filter-option-count">7</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" class="filter-brand" value="garmin"> Garmin
+              <span class="filter-option-count">6</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-title">Price Range</div>
+          <div class="price-range-wrap">
+            <div class="price-range-inputs">
+              <input type="number" id="price-min" placeholder="$0" min="0" aria-label="Minimum price">
+              <span class="price-separator">–</span>
+              <input type="number" id="price-max" placeholder="$500" min="0" aria-label="Maximum price">
+            </div>
+            <button class="btn btn-ghost btn-sm w-full" id="apply-price">Apply</button>
+          </div>
+        </div>
+
+        <div class="filter-section">
+          <div class="filter-title">Rating</div>
+          <div class="filter-options">
+            <label class="filter-option"><input type="checkbox"> ★★★★★ (5 stars)</label>
+            <label class="filter-option"><input type="checkbox"> ★★★★☆ (4+ stars)</label>
+            <label class="filter-option"><input type="checkbox"> ★★★☆☆ (3+ stars)</label>
+          </div>
+        </div>
+
+        <button class="btn btn-ghost btn-sm w-full" onclick="document.querySelectorAll('.filter-category,.filter-brand').forEach(i=>i.checked=false);document.getElementById('price-min').value='';document.getElementById('price-max').value='';document.querySelectorAll('.product-card').forEach(c=>c.style.display='');document.getElementById('result-count').textContent='87';">
+          Clear All Filters
+        </button>
+      </aside>
+
+      <!-- Main Products -->
+      <div class="shop-main">
+        <div class="shop-toolbar">
+          <p class="shop-result-count"><strong id="result-count">87</strong> products found</p>
+          <div class="shop-controls">
+            <label for="sort-select" class="sr-only">Sort products</label>
+            <select class="sort-select" id="sort-select" aria-label="Sort products">
+              <option value="default">Sort: Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name-asc">Name: A–Z</option>
+            </select>
+            <div class="view-toggle" role="group" aria-label="View mode">
+              <button class="view-btn active" data-view="grid" aria-label="Grid view" title="Grid view">⊞</button>
+              <button class="view-btn" data-view="list" aria-label="List view" title="List view">☰</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+
+          <article class="product-card" data-category="footwear" data-brand="adidas" data-price="159.99" data-name="Ultra Boost Pro Running Shoes">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop" alt="Ultra Boost Pro Running Shoes" loading="lazy">
+              <div class="product-badges"><span class="badge badge-sale">-20%</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Footwear</div>
+              <h3 class="product-name">Ultra Boost Pro Running Shoes</h3>
+              <p class="product-desc">Responsive cushioning and energy-return technology for peak running performance.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$159.99</span><span class="price-original">$199.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-001" data-product-name="Ultra Boost Pro Running Shoes" data-product-price="159.99" data-product-img="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="activewear" data-brand="nike" data-price="89.99" data-name="Pro-Dry Training Compression Set">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&auto=format&fit=crop" alt="Pro-Dry Training Compression Set" loading="lazy">
+              <div class="product-badges"><span class="badge badge-primary">Best Seller</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Activewear</div>
+              <h3 class="product-name">Pro-Dry Training Compression Set</h3>
+              <p class="product-desc">Moisture-wicking compression fabric that keeps you cool and supports muscle recovery.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$89.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-002" data-product-name="Pro-Dry Training Compression Set" data-product-price="89.99" data-product-img="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="footwear" data-brand="reebok" data-price="129.99" data-name="CrossFit Elite Training Shoes">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&auto=format&fit=crop" alt="CrossFit Elite Training Shoes" loading="lazy">
+              <div class="product-badges"><span class="badge badge-accent">Top Rated</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Footwear</div>
+              <h3 class="product-name">CrossFit Elite Training Shoes</h3>
+              <p class="product-desc">Versatile cross-training shoes built for box jumps, lifts, and high-intensity workouts.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$129.99</span><span class="price-original">$149.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-003" data-product-name="CrossFit Elite Training Shoes" data-product-price="129.99" data-product-img="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories" data-brand="nike" data-price="64.99" data-name="Sport Performance Bag">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800&auto=format&fit=crop" alt="Sport Performance Bag" loading="lazy">
+              <div class="product-badges"><span class="badge badge-new">New</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Accessories</div>
+              <h3 class="product-name">Sport Performance Bag</h3>
+              <p class="product-desc">Lightweight, water-resistant gym bag with dedicated shoe compartment and wet pocket.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$64.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-004" data-product-name="Sport Performance Bag" data-product-price="64.99" data-product-img="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="tech" data-brand="garmin" data-price="249.99" data-name="ProTrack Fitness Watch">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop" alt="ProTrack Fitness Watch" loading="lazy">
+              <div class="product-badges"><span class="badge badge-new">New</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Tech &amp; Wearables</div>
+              <h3 class="product-name">ProTrack Fitness Watch</h3>
+              <p class="product-desc">Advanced GPS sports watch with heart rate monitoring, sleep tracking, and 7-day battery.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$249.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-005" data-product-name="ProTrack Fitness Watch" data-product-price="249.99" data-product-img="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="equipment" data-brand="under-armour" data-price="44.99" data-name="Resistance Band Set Pro">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&auto=format&fit=crop" alt="Resistance Band Set Pro" loading="lazy">
+              <div class="product-badges"><span class="badge badge-new">New</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Equipment</div>
+              <h3 class="product-name">Resistance Band Set Pro</h3>
+              <p class="product-desc">5-band progressive resistance set for strength training, mobility, and rehabilitation.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$44.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-006" data-product-name="Resistance Band Set Pro" data-product-price="44.99" data-product-img="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="footwear" data-brand="new-balance" data-price="119.99" data-name="Fresh Foam Trail Runner">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop" alt="Fresh Foam Trail Runner shoes" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Footwear</div>
+              <h3 class="product-name">Fresh Foam Trail Runner</h3>
+              <p class="product-desc">All-terrain trail running shoe with grippy outsole and plush underfoot cushioning.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$119.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-007" data-product-name="Fresh Foam Trail Runner" data-product-price="119.99" data-product-img="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="activewear" data-brand="adidas" data-price="74.99" data-name="Aeroready Training Jacket">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&auto=format&fit=crop" alt="Aeroready Training Jacket" loading="lazy">
+              <div class="product-badges"><span class="badge badge-sale">-15%</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Activewear</div>
+              <h3 class="product-name">Aeroready Training Jacket</h3>
+              <p class="product-desc">Lightweight training jacket with moisture-absorbing AEROREADY technology and zip pockets.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$74.99</span><span class="price-original">$89.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-008" data-product-name="Aeroready Training Jacket" data-product-price="74.99" data-product-img="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="equipment" data-brand="under-armour" data-price="199.99" data-name="Adjustable Dumbbell Set">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&auto=format&fit=crop" alt="Adjustable Dumbbell Set" loading="lazy">
+              <div class="product-badges"><span class="badge badge-primary">Popular</span></div>
+            </div>
+            <div class="product-body">
+              <div class="product-category">Equipment</div>
+              <h3 class="product-name">Adjustable Dumbbell Set</h3>
+              <p class="product-desc">Space-saving adjustable dumbbells from 5–52.5 lbs. Replace 15 sets of weights in one.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$199.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-009" data-product-name="Adjustable Dumbbell Set" data-product-price="199.99" data-product-img="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="accessories" data-brand="nike" data-price="34.99" data-name="Elite Sports Water Bottle">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=800&auto=format&fit=crop" alt="Elite Sports Water Bottle" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Accessories</div>
+              <h3 class="product-name">Elite Sports Water Bottle</h3>
+              <p class="product-desc">32oz insulated stainless steel bottle that keeps drinks cold 24hrs and hot 12hrs.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$34.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-010" data-product-name="Elite Sports Water Bottle" data-product-price="34.99" data-product-img="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="footwear" data-brand="puma" data-price="109.99" data-name="Velocity Nitro Running Shoes">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&auto=format&fit=crop" alt="Velocity Nitro Running Shoes" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Footwear</div>
+              <h3 class="product-name">Velocity Nitro Running Shoes</h3>
+              <p class="product-desc">Nitrogen-infused NITRO foam midsole for maximum cushioning and energy return on every stride.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$109.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-011" data-product-name="Velocity Nitro Running Shoes" data-product-price="109.99" data-product-img="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="nutrition" data-brand="under-armour" data-price="49.99" data-name="Performance Protein Blend">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&auto=format&fit=crop" alt="Performance Protein Blend supplement" loading="lazy">
+            </div>
+            <div class="product-body">
+              <div class="product-category">Nutrition</div>
+              <h3 class="product-name">Performance Protein Blend</h3>
+              <p class="product-desc">25g of high-quality protein per serving with BCAAs and digestive enzymes. 30 servings.</p>
+              <div class="product-footer">
+                <div class="product-price"><span class="price-current">$49.99</span></div>
+                <button class="btn-cart" data-action="add-to-cart" data-product-id="prod-012" data-product-name="Performance Protein Blend" data-product-price="49.99" data-product-img="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&auto=format&fit=crop" aria-label="Add to cart">🛒 Add</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="Peak Performance Sports Home">
+          <div class="footer-logo-icon" aria-hidden="true">⚡</div>
+          <span class="footer-logo-name">Peak Performance Sports</span>
+        </a>
+        <p class="footer-brand-desc">Empowering athletes and fitness enthusiasts at every level with high-quality gear, trusted brands, and a seamless shopping experience.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="#" class="social-link" aria-label="Instagram">📸</a>
+          <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+          <a href="#" class="social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page.html">Shop All</a></li>
+          <li><a href="sports__fitness.html">Sports &amp; Fitness</a></li>
+          <li><a href="new_arrivals.html">New Arrivals</a></li>
+          <li><a href="brands.html">Brands</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Help &amp; Info</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Contact Us</h3>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">📍</span>
+          <span>123 Athletic Drive, Sports City, SC 45678</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">📞</span>
+          <span>+1 (555) 867-5309</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">✉️</span>
+          <span>support@peakperformance.com</span>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-icon" aria-hidden="true">🕐</span>
+          <span>Mon–Fri: 8am–8pm · Sat–Sun: 9am–5pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Peak Performance Sports. All rights reserved.</p>
+      <nav class="footer-legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cart-overlay" role="presentation"></div>
+<aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-modal="true">
+  <div class="cart-header">
+    <h3>🛒 Your Cart</h3>
+    <button class="icon-btn" id="cart-close" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-value" id="cart-total-value">$0.00</span>
+    </div>
+    <button class="btn btn-primary w-full" onclick="alert('Checkout coming soon!')">Proceed to Checkout</button>
+  </div>
+</aside>
+<div id="cart-toast" role="alert" aria-live="polite" style="position:fixed;bottom:90px;right:28px;background:var(--secondary);color:#fff;padding:12px 20px;border-radius:var(--radius-xl);font-size:0.9rem;font-weight:600;box-shadow:var(--shadow-lg);z-index:3000;opacity:0;transform:translateY(8px);transition:all 0.3s cubic-bezier(0.4,0,0.2,1);pointer-events:none;"></div>
+<button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode"><span id="theme-icon">🌙</span></button>
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}#cart-toast.show{opacity:1;transform:translateY(0)}</style>
+<script src="script.js"></script>
+</body>
+</html>
